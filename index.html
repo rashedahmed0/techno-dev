@@ -7,16 +7,42 @@
     <title>Techno dev</title>
     <link rel="shortcut icon" href="./img/fac icon.jpg" type="image/x-icon">
 
+    <!-- tailwind and daisyUi cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!--  -->
+    <!--font awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .read-more:hover .fa-right-long {
+            transform: translateX(8px);
+            transition: 0.3s;
+        }
+
+        .title h1 {
+            position: relative;
+        }
+
+        .title h1::after {
+            content: '';
+            height: 3px;
+            width: 100px;
+            position: absolute;
+            background: #e6a600;
+            top: 20px;
+
+        }
+    </style>
 </head>
 
 <body>
+    <!-- header section -->
     <header class="w-[90%] mx-auto  ">
+        <!-- nav section -->
         <div class="navbar flex justify-between w-full  ">
-            <div class="flex justify-between flex-row-reverse lg:w-[50%] w-[100%]">
+            <div class="flex justify-between flex-row-reverse lg:w-[20%] w-[100%]">
+                <!-- mobile device   -->
                 <div class="dropdown">
+                    <!-- hamburger menu  -->
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
@@ -32,8 +58,10 @@
                         <li><a class="hover:text-[#e6a600] text-lg">Contact</a></li>
                     </ul>
                 </div>
+                <!-- logo -->
                 <a class="text-3xl font-bold text-[#e6a600]">Techno</a>
             </div>
+            <!-- main menu section -->
             <div class="hidden lg:flex">
                 <ul class="menu menu-horizontal px-1 text-center">
                     <li><a class="hover:text-[#e6a600] hover:bg-white text-lg">Home</a></li>
@@ -47,7 +75,10 @@
             </div>
         </div>
     </header>
+    <!-- banner section -->
     <section class="banner">
+        <!-- title -->
+
         <div class="hero min-h-screen" style="background-image: url(./img/Banner.jpg);">
             <div class="hero-overlay bg-opacity-70"></div>
             <div class="hero-content text-neutral-content text-center">
@@ -64,8 +95,47 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <!-- about section  -->
+    <section class="about w-[90%] mx-auto my-[50px]">
+        <div class="title mb-8">
+            <h1 class=" text-[#e6a600] text-3xl font-bold ">About us </h1>
+        </div>
 
+        <div class="flex md:justify-between flex-col-reverse lg:flex-row  items-center">
+            <!-- about text  -->
+            <div class="basis-[45%]">
+                <h1 class="text-3xl font-bold text-[#555] mb-2">Innovative Software Solutions for Your Success</h1>
+                <p class="mb-3 text-[#777]">
+                    We are passionate about creating cutting-edge software solutions that drive success and efficiency
+                    for businesses of all sizes. Founded in 2024, our mission is to deliver top-notch, tailored software
+                    products designed to meet the unique needs of our clients
+                </p>
+                <ul class="mb-5">
+                    <li class="mb-2"><span class=" "><i
+                                class="fa-solid fa-check border-2 text-[#e6a600] border-[#e6a600]  rounded-full  py-1  px-1"></i></span>
+                        Tailored Solutions:
+                        Custom software designed to fit your specific business
+                        requirements.</li>
+                    <li class="mb-2"><span class=" "><i
+                                class="fa-solid fa-check border-2 text-[#e6a600] border-[#e6a600]  rounded-full  py-1  px-1"></i></span>
+                        Driving Efficiency:
+                        Innovative tools to streamline operations and boost productivity.
+                    </li>
+                    <li class="mb-2"><span class=" "><i
+                                class="fa-solid fa-check border-2 text-[#e6a600] border-[#e6a600]  rounded-full  py-1  px-1"></i></span>
+                        Client-Centric
+                        Approach: Dedicated to delivering excellence and exceeding client
+                        expectations.</li>
+                </ul>
+                <a href="" class=" px-8 py-2 text-white bg-[#e6a600] rounded-md read-more">Read more <i
+                        class="fa-solid fa-right-long"></i></a>
+
+            </div>
+            <!-- about img  -->
+            <div class="basis-[45%] ">
+                <img src="./img/about.jpg" alt="">
+            </div>
+        </div>
 
     </section>
 </body>
