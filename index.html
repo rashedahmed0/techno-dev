@@ -47,7 +47,7 @@
             transition: 0.5s;
         }
 
-        @keyframes appear {
+        @keyframes appear1 {
             from {
                 opacity: 0;
                 /* clip-path: inset(100% 100% 0 0); */
@@ -63,14 +63,47 @@
             }
         }
 
-        .about {
-            animation: appear linear;
+        @keyframes appear2 {
+            from {
+                opacity: 0;
+                clip-path: inset(100% 100% 0 0);
+                /* transform: translate(-100px); */
+            }
+
+            to {
+                opacity: 1;
+                clip-path: inset(0 0 0 0);
+                /* transform: translate(0px); */
+            }
+        }
+
+        @keyframes appear3 {
+            from {
+                opacity: 0;
+                transform: translate(-100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0px);
+            }
+        }
+
+
+        .anime {
+            animation: appear1 linear;
             animation-timeline: view();
             animation-range: entry 0% cover 40%;
         }
 
-        .brands {
-            animation: appear linear;
+        .anime1 {
+            animation: appear2 linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+
+        .anime2 {
+            animation: appear3 linear;
             animation-timeline: view();
             animation-range: entry 0% cover 40%;
         }
@@ -146,7 +179,7 @@
 
         <div class="flex md:justify-between flex-col-reverse lg:flex-row  items-center">
             <!-- about text  -->
-            <div class="basis-[45%]">
+            <div class="basis-[45%] anime">
                 <h1 class="text-3xl font-bold text-[#555] mb-2">Innovative Software Solutions for Your Success</h1>
                 <p class="mb-3 text-[#777]">
                     We are passionate about creating cutting-edge software solutions that drive success and efficiency
@@ -175,7 +208,7 @@
 
             </div>
             <!-- about img  -->
-            <div class="basis-[45%] ">
+            <div class="basis-[45%] anime ">
                 <img src="./img/about.jpg" alt="">
             </div>
         </div>
@@ -189,7 +222,7 @@
         </div>
         <!-- brands cards  -->
         <div class="flex md:justify-between gap-5  flex-col lg:flex-row">
-            <div class="basis-[37%] border-2 py-5  px-5  bg-[#e6a600] text-white">
+            <div class="basis-[37%] border-2 py-5  px-5  bg-[#e6a600] text-white anime2">
                 <h1 class="text-4xl font-bold ">Why Choose Our Products?</h1>
                 <p class="my-10">At Techno Developers Thrill, we are committed to delivering innovative, high-quality
                     software solutions tailored to meet your unique needs. Here’s why you should choose our products:
@@ -198,7 +231,7 @@
                     class=" py-3 px-10 mb-3 bg-[#ca9204] rounded-md hover:text-[#e6a600] hover:bg-[#fff]"> Learn
                     more </a>
             </div>
-            <div class="basis-[21%] border-2 p-4 py-9 text-center brand-card">
+            <div class="basis-[21%] border-2 p-4 py-9 text-center brand-card anime2">
                 <span class="inline-flex justify-center items-center w-16 h-16 rounded-full bg-[#fff4db] ">
 
                     <i class=" fa-solid fa-check-to-slot text-3xl text-[#e6a600]"></i>
@@ -209,7 +242,7 @@
                     individuals, enabling efficient goal achievement.
                 </p>
             </div>
-            <div class="basis-[21%] border-2 p-4 py-9 text-center brand-card">
+            <div class="basis-[21%] border-2 p-4 py-9 text-center brand-card anime2">
                 <span class="inline-flex justify-center items-center w-16 h-16 rounded-full bg-[#fff4db]">
                     <i class=" fa-regular fa-gem text-3xl text-[#e6a600]"></i>
                 </span>
@@ -219,7 +252,7 @@
                     customersatisfaction
                 </p>
             </div>
-            <div class="basis-[21%] border-2 p-4 py-9 text-center brand-card">
+            <div class="basis-[21%] border-2 p-4 py-9 text-center brand-card anime2">
                 <span class="inline-flex justify-center items-center w-16 h-16 rounded-full bg-[#fff4db]  ">
                     <i class=" fa-solid fa-print text-3xl text-[#e6a600]"></i>
                 </span>
@@ -233,40 +266,40 @@
     </section>
 
     <!-- objectives section -->
-    <section class="objectiv3 mb-[50px] w-[90%] mx-auto">
-        <div class="title mb-8">
+    <section class="objectiv3 mb-[50px] w-[90%] mx-auto anime">
+        <div class="title mb-8 anime">
             <h1 class=" text-[#e6a600] text-3xl font-bold ">Objectives </h1>
         </div>
 
-        <div class="collapse collapse-plus mb-2" style="background: #fff8e7 ; color: #333;">
+        <div class="collapse collapse-plus mb-2  " style="background: #fff8e7 ; color: #333;">
             <input type="radio" name="my-accordion-3" checked="checked" />
             <div class="collapse-title text-lg font-medium">INNOVATION</div>
             <div class="collapse-content">
                 <p>Develop cutting-edge softwarethat meets the evolving needs ofbusinesses</p>
             </div>
         </div>
-        <div class="collapse collapse-plus mb-2" style="background: #fff8e7 ; color: #333;">
+        <div class="collapse collapse-plus mb-2  " style="background: #fff8e7 ; color: #333;">
             <input type="radio" name="my-accordion-3" />
             <div class="collapse-title text-lg font-medium">EASE OF USE </div>
             <div class="collapse-content">
                 <p>Design intuitive user interfaces</p>
             </div>
         </div>
-        <div class="collapse collapse-plus mb-2" style="background: #fff8e7 ; color: #333;">
+        <div class="collapse collapse-plus mb-2  " style="background: #fff8e7 ; color: #333;">
             <input type="radio" name="my-accordion-3" />
             <div class="collapse-title text-lg font-medium">RELIABILITY</div>
             <div class="collapse-content">
                 <p>Maintain high standards of qualityand performance in our software</p>
             </div>
         </div>
-        <div class="collapse collapse-plus mb-2" style="background: #fff8e7 ; color: #333;">
+        <div class="collapse collapse-plus mb-2  " style="background: #fff8e7 ; color: #333;">
             <input type="radio" name="my-accordion-3" />
             <div class="collapse-title text-lg font-medium">INTEGRITY</div>
             <div class="collapse-content">
                 <p>Uphold transparency and honestyin all business dealings</p>
             </div>
         </div>
-        <div class="collapse collapse-plus mb-2" style="background: #fff8e7 ; color: #333;">
+        <div class="collapse collapse-plus mb-2  " style="background: #fff8e7 ; color: #333;">
             <input type="radio" name="my-accordion-3" />
             <div class="collapse-title text-lg font-medium">IMPROVEMENT</div>
             <div class="collapse-content">
