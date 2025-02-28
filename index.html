@@ -46,6 +46,34 @@
             color: white;
             transition: 0.5s;
         }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                /* clip-path: inset(100% 100% 0 0); */
+                /* transform: translate(-100px); */
+                scale: 0.5;
+            }
+
+            to {
+                opacity: 1;
+                /* clip-path: inset(0 0 0 0); */
+                /* transform: translate(0px); */
+                scale: 1;
+            }
+        }
+
+        .about {
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+
+        .brands {
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
     </style>
 </head>
 
