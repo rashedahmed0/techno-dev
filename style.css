@@ -1,0 +1,104 @@
+.read-more:hover .fa-right-long {
+    transform: translateX(8px);
+    transition: 0.3s;
+}
+
+.title h1 {
+    position: relative;
+}
+
+.title h1::after {
+    content: '';
+    height: 3px;
+    width: 100px;
+    position: absolute;
+    background: #e6a600;
+    top: 20px;
+
+}
+
+h6 {
+    color: #fff4db;
+}
+
+.brand-card:hover span {
+    background: #e6a600;
+    color: white;
+    transition: 0.5s;
+}
+
+.brand-card:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+@keyframes appear1 {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+@keyframes appear2 {
+    from {
+        opacity: 0;
+        clip-path: inset(100% 100% 0 0);
+
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes appear3 {
+    from {
+        opacity: 0;
+        transform: translate(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+.anime {
+    animation: appear1 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.anime1 {
+    animation: appear2 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.anime2 {
+    animation: appear3 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.service-card:hover i {
+    color: #e6a600;
+    transition: 0.5s;
+}
+
+.service-card:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.5s;
+}
+
+.service-card {
+    padding: 20px 35px;
+    border-radius: 10px;
+}
